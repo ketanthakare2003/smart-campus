@@ -333,7 +333,7 @@ const AdminUsersList: React.FC = () => {
           TAB 2: USER DIRECTORY
           ======================================================== */}
       {activeTab === 'users' && (
-        <div className="glass rounded-xl border border-slate-800/80 overflow-hidden animate-in fade-in duration-200 relative">
+        <div className="glass rounded-xl border border-slate-800/80 overflow-hidden animate-in fade-in duration-200 relative min-h-[280px]">
           {activeDropdown !== null && (
             <div 
               className="fixed inset-0 z-10" 
@@ -341,7 +341,7 @@ const AdminUsersList: React.FC = () => {
             />
           )}
 
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto min-h-[280px]">
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="border-b border-slate-800 bg-slate-900/40 text-3xs font-bold uppercase tracking-wider text-slate-400">
