@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
+import org.springframework.scheduling.annotation.Async;
+
 @Component
 public class SmartCampusEventListener implements ApplicationListener<SmartCampusEvent> {
 
@@ -20,6 +22,7 @@ public class SmartCampusEventListener implements ApplicationListener<SmartCampus
     private EmailService emailService;
 
     @Override
+    @Async
     public void onApplicationEvent(SmartCampusEvent event) {
         try {
             // 1. Log Activity
